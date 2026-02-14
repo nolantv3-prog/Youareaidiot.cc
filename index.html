@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Totally Normal Website</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #ddd;
+      font-family: Arial, sans-serif;
+    }
+
+    .popup {
+      position: absolute;
+      width: 250px;
+      background: white;
+      border: 2px solid black;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+      animation: float 0.5s ease-in-out;
+    }
+
+    .popup-header {
+      background: #444;
+      color: white;
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .popup img {
+      width: 100%;
+      display: block;
+    }
+
+    @keyframes float {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function createPopup() {
+    const popup = document.createElement("div");
+    popup.className = "popup";
+
+    popup.style.top = Math.random() * (window.innerHeight - 200) + "px";
+    popup.style.left = Math.random() * (window.innerWidth - 250) + "px";
+
+    popup.innerHTML = `
+      <div class="popup-header">New Tab</div>
+      <img src="image.png">
+    `;
+
+    document.body.appendChild(popup);
+  }
+
+  setInterval(createPopup, 1000);
+</script>
+
+</body>
+</html>
+
+
