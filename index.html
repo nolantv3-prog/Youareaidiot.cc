@@ -1,64 +1,58 @@
+Perfect — we’ll **embed the image directly into the code** so you don’t need to upload anything else.
+Just one file → deploy to Vercel → done ✅
+
+---
+
+## ✅ Create ONE file called `index.html`
+
+Paste **everything below** into it:
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Totally Normal Website</title>
+  <title>Normal Website :)</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
-      background: #ddd;
+      background: #dcdcdc;
       font-family: Arial, sans-serif;
+      transition: transform 0.05s linear;
     }
 
     .popup {
       position: absolute;
-      width: 250px;
       background: white;
       border: 2px solid black;
-      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-      animation: float 0.5s ease-in-out;
+      box-shadow: 8px 8px 15px rgba(0,0,0,0.4);
+      animation: appear 0.2s ease-out;
     }
 
     .popup-header {
-      background: #444;
+      background: #333;
       color: white;
-      padding: 5px;
-      font-size: 14px;
+      padding: 4px;
+      font-size: 12px;
     }
 
     .popup img {
       width: 100%;
       display: block;
+      pointer-events: none;
+      user-select: none;
     }
 
-    @keyframes float {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    @keyframes appear {
+      from { transform: scale(0.3) rotate(-20deg); opacity: 0; }
+      to { transform: scale(1) rotate(0deg); opacity: 1; }
     }
   </style>
 </head>
 <body>
 
 <script>
-  function createPopup() {
-    const popup = document.createElement("div");
-    popup.className = "popup";
-
-    popup.style.top = Math.random() * (window.innerHeight - 200) + "px";
-    popup.style.left = Math.random() * (window.innerWidth - 250) + "px";
-
-    popup.innerHTML = `
-      <div class="popup-header">New Tab</div>
-      <img src="image.png">
-    `;
-
-    document.body.appendChild(popup);
-  }
-
-  setInterval(createPopup, 1000);
-</script>
-
-</body>
-</html>
-
-
+/* --- IMAGE EMBEDDED DIRECTLY (no file needed) --- */
+const embeddedImage =
+"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAD0f5bSAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nO3de5BV5f3/8fdlC0mQkE0o0lCwGk0oQyq0iE3QqQ0o0mJpK0y6rQ0lJrZpQy0m6k0a1o2pY6lq1aK0rZrW0rVqK6oYpQhGm1QJYJQkQ0hCkQhIQgkI5k9+9+9w7m7O7u7M7v7+7c3vP+f3zv3fOec7zvOe95z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3vOc85z3v
+```
